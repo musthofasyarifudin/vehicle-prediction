@@ -1,0 +1,24 @@
+{
+  "description": "Cleaned-up and consolidated car fuel consumption and emissions data for years\r\n2000 to 2013. Data is published by the [Vehicle Certification Agency](http://www.dft.gov.uk/vca/)\r\n(VCA), an Executive Agency of the United Kingdom Department for Transport.\r\n\r\nData is available to download at [http://carfueldata.direct.gov.uk/downloads/default.aspx]().\r\n\r\nIt is assumed that the data is released under the [UK Open Government License](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/).\r\n\r\nFor more details about the data, please check the information booklet\r\n[http://carfueldata.direct.gov.uk/additional/aug2013/VCA-Booklet-text-Aug-2013.pdf]().\r\n\r\n## Data Cleaning\r\n\r\nThe original data is published in separate CSV file starting from 2000, but\r\nthe format is not consistent across years. Data has been consolidated for\r\nmachine using [OpenRefine](http://openrefine.org). The script with the tasks\r\nperformed on the 2013 CSV files is included in the `scripts` folder. Some\r\nexample operations performed include:\r\n\r\n* Consolidate different field names across different years\r\n* Consolidate measure units for emissions data across different years\r\n* Set proper field types to allow indexing and analysis (eg numeric fields)\r\n* Normalize manufacturer and model descriptions\r\n* Trim excess whitespace\r\n* Fix encoding for special characters\r\n* etc\r\n\r\nNote that the resulting dataset does not include all fields in the original\r\ndata, only those deemed more relevant.", 
+  "resources": [
+    {
+      "path": "https://github.com/amercader/car-fuel-and-emissions/raw/master/data.csv", 
+      "title": "CSV file", 
+      "name": "csv-file", 
+      "format": "CSV"
+    }, 
+    {
+      "path": "https://github.com/amercader/car-fuel-and-emissions/raw/master/datapackage.json", 
+      "title": "datapackage.json", 
+      "name": "datapackage-json", 
+      "format": "JSON"
+    }
+  ], 
+  "name": "car-fuel-consumptions-and-emissions", 
+  "license": {
+    "url": "http://reference.data.gov.uk/id/open-government-licence", 
+    "type": "uk-ogl", 
+    "title": "UK Open Government Licence (OGL)"
+  }, 
+  "title": "Car fuel consumptions and emissions 2000-2013"
+}
